@@ -1,5 +1,5 @@
 galaxy_info:
-  role_name: 'ansible-role-install_puppet_server'
+  role_name: 'install_puppet_server'
   namespace: 'johanneskastl'
   author: 'Johannes Kastl'
   description: "Install the puppet server from Puppetlab's repository"
