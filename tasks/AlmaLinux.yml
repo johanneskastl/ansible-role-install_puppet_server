@@ -1,7 +1,7 @@
 ---
 # install_puppet_server/tasks/AlmaLinux.yml
 
-- name: 'import the puppet GPG key into RPM'
+- name: 'Import the puppet GPG key into RPM'
   ansible.builtin.rpm_key:
     key: "{{ item }}"
     state: 'present'
@@ -17,7 +17,7 @@
     state: 'present'
   when: 'ansible_distribution == "AlmaLinux"'
 
-- name: 'import the puppet GPG keys into RPM'
+- name: 'Import the puppet GPG keys into RPM'
   ansible.builtin.rpm_key:
     key: "{{ item }}"
     state: 'present'
