@@ -25,11 +25,11 @@
     - '/etc/pki/rpm-gpg/RPM-GPG-KEY-puppet7-release'
     - '/etc/pki/rpm-gpg/RPM-GPG-KEY-2025-04-06-puppet7-release'
   when: 'ansible_distribution == "Rocky"'
-  ignore_errors: "{{ ansible_check_mode |default(false)}}"
+  ignore_errors: "{{ ansible_check_mode | default(false) }}"
 
 - name: 'Install the puppet-server package'
   ansible.builtin.package:
     name: 'puppetserver'
     state: 'present'
-  ignore_errors: "{{ ansible_check_mode |default(false)}}"
+  ignore_errors: "{{ ansible_check_mode | default(false) }}"
   when: 'ansible_distribution == "Rocky"'
