@@ -2,7 +2,7 @@
 # install_puppet_server/tasks/AlmaLinux.yml
 
 - name: 'import the puppet GPG key into RPM'
-  rpm_key:
+  ansible.builtin.rpm_key:
     key: "{{ item }}"
     state: 'present'
   with_items:
@@ -12,13 +12,13 @@
   when: 'ansible_distribution == "AlmaLinux"'
 
 - name: 'Install the puppet-release package'
-  dnf:
+  ansible.builtin.dnf:
     name: 'https://yum.puppet.com/puppet7-release-el-8.noarch.rpm'
     state: 'present'
   when: 'ansible_distribution == "AlmaLinux"'
 
 - name: 'import the puppet GPG keys into RPM'
-  rpm_key:
+  ansible.builtin.rpm_key:
     key: "{{ item }}"
     state: 'present'
   with_items:
@@ -28,7 +28,7 @@
   ignore_errors: "{{ ansible_check_mode |default(false)}}"
 
 - name: 'Install the puppet-server package'
-  package:
+  ansible.builtin.package:
     name: 'puppetserver'
     state: 'present'
   ignore_errors: "{{ ansible_check_mode |default(false)}}"
