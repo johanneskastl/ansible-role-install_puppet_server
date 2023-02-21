@@ -1,3 +1,5 @@
+![Ansible Lint](https://github.com/johanneskastl/ansible-role-install_puppet_server/workflows/Ansible%20Lint/badge.svg)
+
 install_puppet_server
 =========
 
