@@ -23,7 +23,7 @@ Example Playbook
 
     - hosts: servers
       roles:
-        - { role: 'johanneskastl.install_puppet_server' }
+        - role: 'johanneskastl.install_puppet_server'
 
 License
 -------
